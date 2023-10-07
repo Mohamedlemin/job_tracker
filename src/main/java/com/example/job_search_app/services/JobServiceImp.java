@@ -5,9 +5,12 @@ import com.example.job_search_app.repositories.JobRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class JobServiceImp implements JobService{
+
+
     private final JobRepository jobRepository;
 
     public JobServiceImp(JobRepository jobRepository) {
@@ -33,5 +36,10 @@ public class JobServiceImp implements JobService{
     @Override
     public void deleteJobById(Long id) {
         jobRepository.deleteById(id);
+    }
+
+    @Override
+    public Optional<Job> getOne(Long id) {
+        return jobRepository.findById(id);
     }
 }

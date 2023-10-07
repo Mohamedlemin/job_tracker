@@ -9,6 +9,7 @@ import java.time.LocalDate;
 
 @Entity
 public class Job {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
@@ -20,6 +21,19 @@ public class Job {
     private LocalDate date;
     private String progress;
     private boolean status;
+
+    public Job() {
+    }
+
+    public Job( String title, String description, String companyInfo, String location, LocalDate date, String progress, boolean status) {
+        this.title = title;
+        this.description = description;
+        this.companyInfo = companyInfo;
+        this.location = location;
+        this.date = date;
+        this.progress = progress;
+        this.status = status;
+    }
 
     public void setId(Long id) {
         this.id = id;

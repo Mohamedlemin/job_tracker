@@ -10,4 +10,6 @@ public class JobSearchAppApplication {
         SpringApplication.run(JobSearchAppApplication.class, args);
     }
 
+
+
 }
