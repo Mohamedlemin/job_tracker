@@ -26,17 +26,14 @@ public class JobController {
         Optional<Job> job = jobService.getOne(id);
         return JobMapper.INSTANCE.jobToJobDto(job);
     }
-
     @PostMapping
     public void Insert(@RequestBody JobDTO job){
         jobService.insert(JobMapper.INSTANCE.toEntity(job));
     }
-
     @PutMapping
     public void updateJob(@RequestBody JobDTO job){
         jobService.updateJob(JobMapper.INSTANCE.toEntity(job));
     }
-
     @DeleteMapping("/{id}")
     public void deleteJobById(@PathVariable("id") Long id){
         jobService.deleteJobById(id);
