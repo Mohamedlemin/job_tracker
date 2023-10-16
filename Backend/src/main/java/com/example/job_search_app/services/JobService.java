@@ -1,7 +1,6 @@
 package com.example.job_search_app.services;
 
 import com.example.job_search_app.entities.Job;
-
 import java.util.List;
 import java.util.Optional;
 

@@ -3,7 +3,6 @@ package com.example.job_search_app.services;
 import com.example.job_search_app.entities.Job;
 import com.example.job_search_app.repositories.JobRepository;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 import java.util.Optional;
 

@@ -1,12 +1,9 @@
 package com.example.job_search_app.controllers;
-
 import com.example.job_search_app.dto.JobDTO;
 import com.example.job_search_app.entities.Job;
 import com.example.job_search_app.mapper.JobMapper;
 import com.example.job_search_app.services.JobServiceImp;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Optional;
 
