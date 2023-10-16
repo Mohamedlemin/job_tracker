@@ -1,4 +1,5 @@
 package com.example.job_search_app.controllers;
+
 import com.example.job_search_app.dto.JobDTO;
 import com.example.job_search_app.entities.Job;
 import com.example.job_search_app.mapper.JobMapper;
