@@ -9,7 +9,12 @@ on:
 
   workflow_dispatch:
 
-
+env:
+  POSTGRESQL_VERSION: 14.5
+  POSTGRESQL_DB: job_tracker
+  POSTGRESQL_USER: postgres
+  POSTGRESQL_PASSWORD: password
+  JAVA_VERSION: 17
 
 jobs:
   build:
@@ -18,9 +23,9 @@ jobs:
       postgres:
         image: postgres:14.5
         env:
-          POSTGRES_DB: 'job_tracker'
-          POSTGRES_USER: 'postgres'
-          POSTGRES_PASSWORD: 'password'
+          POSTGRES_DB: ${{ env.POSTGRESQL_DB }}
+          POSTGRES_USER: ${{ env.POSTGRESQL_USER }}
+          POSTGRES_PASSWORD: ${{ env.POSTGRESQL_PASSWORD }}
         ports:
           - 5432:5432
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
@@ -32,7 +37,7 @@ jobs:
       - uses: actions/setup-java@v1.4.3
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: ${{ env.JAVA_VERSION }}
           cash: 'maven'
       - name: Maven Clean Package
         run: mvn -ntp -B verify
