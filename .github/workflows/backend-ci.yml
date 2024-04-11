@@ -6,6 +6,9 @@ on:
       - master
     paths:
       - backend/**
+  push:
+    branches:
+      - master
 
   workflow_dispatch:
 
