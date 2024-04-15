@@ -20,6 +20,10 @@ public class Interview {
     @Enumerated(EnumType.STRING)
     private InterviewStatus status;
 
+    @ManyToOne
+    @JoinColumn(name = "job_seeker_id")
+    private JobSeeker jobSeeker;
+
 
 
     // Getters and setters

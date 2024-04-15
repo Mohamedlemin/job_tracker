@@ -7,7 +7,6 @@ public record JobDTO (
          String description,
          String companyInfo,
          String location,
-
          LocalDate date,
          String progress,
          boolean status
