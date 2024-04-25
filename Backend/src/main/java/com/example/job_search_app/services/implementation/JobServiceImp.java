@@ -1,13 +1,14 @@
-package com.example.job_search_app.services;
+package com.example.job_search_app.services.implementation;
 
 import com.example.job_search_app.entities.Job;
 import com.example.job_search_app.repositories.JobRepository;
+import com.example.job_search_app.services.JobService;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
 @Service
-public class JobServiceImp implements JobService{
+public class JobServiceImp implements JobService {
 
 
     private final JobRepository jobRepository;

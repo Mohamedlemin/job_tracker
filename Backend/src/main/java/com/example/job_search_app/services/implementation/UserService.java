@@ -1,4 +1,4 @@
-package com.example.job_search_app.services;
+package com.example.job_search_app.services.implementation;
 
 import com.example.job_search_app.entities.User;
 import com.example.job_search_app.repositories.UserRepository;

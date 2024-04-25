@@ -1,9 +1,8 @@
-package com.example.job_search_app.services;
+package com.example.job_search_app.services.implementation;
 
-import com.example.job_search_app.entities.Job;
 import com.example.job_search_app.entities.JobSeeker;
-import com.example.job_search_app.repositories.JobRepository;
 import com.example.job_search_app.repositories.JobSeekerRepository;
+import com.example.job_search_app.services.JobSeekerService;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

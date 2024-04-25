@@ -1,7 +1,7 @@
 package com.example.job_search_app.controllers;
 
 import com.example.job_search_app.entities.ChangePasswordRequest;
-import com.example.job_search_app.services.UserService;
+import com.example.job_search_app.services.implementation.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PatchMapping;

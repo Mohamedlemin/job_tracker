@@ -2,17 +2,12 @@ package com.example.job_search_app.services;
 
 import com.example.job_search_app.entities.Job;
 import com.example.job_search_app.repositories.JobRepository;
-import org.junit.jupiter.api.AfterEach;
+import com.example.job_search_app.services.implementation.JobServiceImp;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
-import org.mockito.MockitoAnnotations;
 import org.mockito.junit.jupiter.MockitoExtension;
-
-import java.util.Random;
-
-import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
 class JobServiceImpTest {
