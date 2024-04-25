@@ -17,7 +17,7 @@ services:
   job_tracker_api:
     image: med3744lemin/job_search_app-api
     environment:
-      SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5432/job_tracker
+      SPRING_DATASOURCE_URL: jdbc:postgresql://localhost:5332/job_tracker
     ports:
       - "80:8080"
     networks:

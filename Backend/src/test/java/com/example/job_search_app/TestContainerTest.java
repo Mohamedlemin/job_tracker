@@ -5,7 +5,8 @@ import org.testcontainers.containers.PostgreSQLContainer;
 import org.testcontainers.junit.jupiter.Container;
 import org.testcontainers.junit.jupiter.Testcontainers;
 
-import static org.assertj.core.api.Assertions.assertThat;
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+
 
 @Testcontainers
 public class TestContainerTest {
@@ -17,7 +18,7 @@ public class TestContainerTest {
             .withPassword("password");
     @Test
     void canStart() {
-//        assertThat(postgreSQLContainer.isCreated()).isTrue();
-//        assertThat(postgreSQLContainer.isRunning()).isTrue();
+	    assertThat(postgreSQLContainer.isCreated()).isTrue();
+	    assertThat(postgreSQLContainer.isRunning()).isTrue();
     }
 }

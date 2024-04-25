@@ -14,12 +14,6 @@ import org.springframework.security.web.authentication.logout.LogoutHandler;
 
 
 import static com.example.job_search_app.entities.Role.*;
-import static com.example.job_search_app.entities.Permission.*;
-import static com.example.job_search_app.entities.Role.MANAGER;
-import static org.springframework.http.HttpMethod.DELETE;
-import static org.springframework.http.HttpMethod.GET;
-import static org.springframework.http.HttpMethod.POST;
-import static org.springframework.http.HttpMethod.PUT;
 import static org.springframework.security.config.http.SessionCreationPolicy.STATELESS;
 
 @Configuration
@@ -28,6 +22,7 @@ import static org.springframework.security.config.http.SessionCreationPolicy.STA
 public class SecurityConfiguration {
 
     private static final String[] WHITE_LIST_URL = {"/api/v1/auth/**",
+            "/api/v1/jobs/**",
             "/v2/api-docs",
             "/v3/api-docs",
             "/v3/api-docs/**",
