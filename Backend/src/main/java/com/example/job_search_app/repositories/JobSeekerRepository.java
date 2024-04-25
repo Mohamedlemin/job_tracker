@@ -6,5 +6,5 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository
-public interface JobSeekerRepository extends JpaRepository<JobSeeker,Long> {
+public interface JobSeekerRepository extends JpaRepository<JobSeeker, Integer> {
 }

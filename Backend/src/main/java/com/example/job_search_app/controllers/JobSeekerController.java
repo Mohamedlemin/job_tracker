@@ -32,7 +32,7 @@ public class JobSeekerController {
 	}
 
 	@GetMapping("{id}")
-	public ResponseEntity<JobSeekerDTO> getById(@PathVariable("id") Long id){
+	public ResponseEntity<JobSeekerDTO> getById(@PathVariable("id") Integer id) {
 		Optional<JobSeeker> jobSeekerOptional = jobSeekerService.getOne(id);
 		if (jobSeekerOptional.isPresent()) {
 			JobSeeker jobSeeker = jobSeekerOptional.get();
@@ -51,7 +51,7 @@ public class JobSeekerController {
 		jobSeekerService.updateJob(JobSeekerMapper.INSTANCE.toEntity(jobSeeker));
 	}
 	@DeleteMapping("/{id}")
-	public void deleteJobById(@PathVariable("id") Long id){
+	public void deleteJobById(@PathVariable("id") Integer id) {
 		jobSeekerService.deleteJobSeekerById(id);
 	}
 

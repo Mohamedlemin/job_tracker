@@ -9,7 +9,8 @@ public interface JobSeekerService {
 	List<JobSeeker> getAll();
 	void insert(JobSeeker jobSeeker);
 	void updateJob(JobSeeker jobSeeker);
-	void deleteJobSeekerById(Long id);
 
-	Optional<JobSeeker> getOne(Long id);
+	void deleteJobSeekerById(Integer id);
+
+	Optional<JobSeeker> getOne(Integer id);
 }

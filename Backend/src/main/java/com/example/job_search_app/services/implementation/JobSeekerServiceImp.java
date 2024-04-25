@@ -35,13 +35,13 @@ public class JobSeekerServiceImp implements JobSeekerService {
 	}
 
 	@Override
-	public void deleteJobSeekerById(Long id) {
+	public void deleteJobSeekerById(Integer id) {
 		jobSeekerRepository.deleteById(id);
 
 	}
 
 	@Override
-	public Optional<JobSeeker> getOne(Long id) {
+	public Optional<JobSeeker> getOne(Integer id) {
 		return jobSeekerRepository.findById(id);
 	}
 }
