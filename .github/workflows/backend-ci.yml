@@ -43,4 +43,4 @@ jobs:
           java-version: ${{ env.JAVA_VERSION }}
           cash: 'maven'
       - name: Maven Clean Package
-        run: mvn -ntp -B verify
+        run: mvn compile jib:build
